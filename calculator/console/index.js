@@ -7,35 +7,35 @@ let action = '';
 function onResetButtonClick()
 {
 	output = '';
-    left = 0;
-    isLeft = true;
+	left = 0;
+	isLeft = true;
 };
 
 function onCalcButtonClick()
 {
-    let value = parseFloat(output);
-    let result = 0;
+	let value = parseFloat(output);
+	let result = 0;
 
-    console.log('value', value)
+	console.log('value', value)
 
-    if (action == "+") {
-        result = left + value;
-    } else
-    if (action == "-") {
-        result = left - value;
-    } else
-    if (action == "x") {
-        result = left * value;
-    } else
-    if (action == "/") {
-        result = left / value;
-    }
+	if (action == "+") {
+		result = left + value;
+	} else
+	if (action == "-") {
+		result = left - value;
+	} else
+	if (action == "x") {
+		result = left * value;
+	} else
+	if (action == "/") {
+		result = left / value;
+	}
 	console.log('result', result);
-    output = String(result);
+	output = String(result);
 
 	isCalced = true;
-    isLeft = true;
-    left = value;
+	isLeft = true;
+	left = value;
 }
 
 function onNumButtonClick(digit){
@@ -43,30 +43,30 @@ function onNumButtonClick(digit){
 	console.log('number clicked', digit)
 
 	if (!isLeft || isCalced) {
-        console.log("reset output");
-        currentValue = "";
-    }
+		console.log("reset output");
+		currentValue = "";
+	}
 
-    isLeft = true;
+	isLeft = true;
 
-    if (isCalced) {
-        console.log("reset left");
-        left = 0;
-    }
+	if (isCalced) {
+		console.log("reset left");
+		left = 0;
+	}
 
-    isCalced = false;
+	isCalced = false;
 
-    output = currentValue + digit;
+	output = currentValue + digit;
 }
 
 function onActionButtonClick(inputAction)
 {
    	let value = parseFloat(output);
-    action = inputAction;
-    left = value;
-    isLeft = false;
-    isCalced = false;
+	action = inputAction;
+	left = value;
+	isLeft = false;
+	isCalced = false;
 
-    console.log("action", action);
+	console.log("action", action);
 	console.log("left", value);
 }
