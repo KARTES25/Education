@@ -1,0 +1,28 @@
+body {
+	background-color: blanchedalmond;
+	background-size: cover;
+   }
+
+button {
+	background-color: #5D8AA8;
+	border: 0px;
+    width: 100%;
+	height: 3em;
+	border-radius: 10px;
+}
+table {
+	background-color: rgb(87, 87, 87);
+	width: 400px;
+	height: 200px;
+    border: 2px solid black;
+	margin: auto;
+	border-radius: 10px;
+   }
+.disp {
+	border: 2px solid black;
+	height: 40px;
+	background-color:rgb(182, 178, 178);
+	text-align: right;
+	border-radius: 10px;
+}
+
